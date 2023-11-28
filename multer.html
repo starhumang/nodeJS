@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:5000/profile" method="post" enctype="multipart/form-data"><!--multipart멀티미디어(파일)를 인코딩한다는 뜻, 따로 지정안하면 utf-8로 인코딩됨-->
+        <input type="file" name="avatar">
+        <button type="submit">단건 등록</button>
+
+    </form>
+
+    <form action="http://localhost:5000/photos" method="post" enctype="multipart/form-data">
+        <input type="file" name="photos" multiple>
+        <button type="submit">여러건 등록</button>
+    </form>
+
+</body>
+</html>
