@@ -1,23 +1,10 @@
 <template>
-  <VueComponent />
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/dataBinding">Databinding</router-link><!-- router-link to= 버튼 링크 거는법 -->
   </nav>
   <router-view/>
 </template>
-
-
-<script>
-import VueComponent from './components/VueComponent.vue'
-
-export default {
-  components : {
-    VueComponent
-  }
-}
-</script>
-
 
 <style>
 #app {
