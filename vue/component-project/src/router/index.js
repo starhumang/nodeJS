@@ -1,6 +1,12 @@
+//import 뒤에 들어가는건 변수이름이라 우리가 임의로 정해도 상관없다(경로만 정확하면 됨)
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DataBinding from '../views/DataBinding.vue';
+import ListBinding from '../views/ListBinding.vue';
+import IFBinding from '../views/IFBinding.vue'; 
+import OnEvent from '../views/OnEvent.vue'; 
+import Options from '../views/Options.vue';
+
 
 const routes = [
   {
@@ -12,7 +18,27 @@ const routes = [
    path:'/dataBinding', //사용하고자하는 경로를 path에 넣음
    name: 'dataBinding',
    component : DataBinding
-  }
+  },
+  {
+    path:'/ListBinding', 
+    name: 'ListBinding',
+    component : ListBinding
+   },
+   {
+    path:'/ifBinding', 
+    name: 'ifBinding',
+    component : IFBinding
+   },
+   {
+    path:'/OnEvent', 
+    name: 'OnEvent',
+    component : OnEvent
+   },
+   {
+    path:'/options', 
+    name: 'options',
+    component : Options
+   }
 ]
 
 const router = createRouter({
