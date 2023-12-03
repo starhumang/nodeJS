@@ -14,4 +14,4 @@ console.log('확장자 : ', path.extname(__filename));
 let pathList = process.env.PATH.split(path.delimiter);//윈도우는 ; POSIX(맥, 리눅스)는 :
 console.log(path.delimiter, pathList);
 console.log('');
-console.log(path.sep, pathList[0].split(path.sep));
+console.log(path.sep, pathList[0].split(path.sep));//sep는 \
