@@ -1,6 +1,6 @@
 const mysql = require('mysql');//모듈먼저 불러옴
 const sql = require('./db/sql.js');
-
+require('dotenv').config({path : './db/mysql.env'});
 //pool은 여러쿼리문을 동시에 병렬적으로 처리가능함
 //개인정보는 쓰면 안됨
 //process.env뒤에 mysql.env에서 가져온 키값을 넣어서 입력
@@ -33,10 +33,11 @@ const query = async (alias, values) =>{
     })
 }
 //일차적으로 연결이 잘 되었는지 확인
-// const getData = async() =>{
-//     console.log(await query('customerList'));
-// }
-// getData();
+const getData = async() =>{
+    console.log(await query('customerList'));
+}
+getData();
+console.log("dddds")
 
 
 module.exports = {

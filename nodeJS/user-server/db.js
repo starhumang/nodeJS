@@ -16,11 +16,11 @@ const pool = mysql.createPool({
 
 
 const query = async (alias, values)=>{
-    return new Promise((resolve, rejcect)=>{
+    return new Promise((resolve, reject)=>{
         pool.query(sql[alias], values,(err, results)=>{
             if(err){
                 console.log(err);
-                rejcect(err);
+                reject(err);
             }else{
                 resolve(results);
             }
