@@ -14,34 +14,34 @@ app.listen(5000, ()=>{
 });
 
 // 전체조회
-app.get('/t_users', async(req, res)=>{
+app.get('/users', async(req, res)=>{
     let list = await mysql.query('userList');
     res.send(list);
 });
 
 //부분조회
-app.get('/t_users/:no', async(req, res)=>{
+app.get('/users/:no', async(req, res)=>{
     let data = req.params.no;
     let result = await mysql.query('userInfo', data);
     res.send(result[0]);
 });
 
 //입력
-app.post('/t_users', async(req, res)=>{
+app.post('/users', async(req, res)=>{
     let data = req.body.param;
     let result = await mysql.query('userInsert', data);
     res.send(result);
 });
 
 //수정
-app.put('/t_users/:no', async(req, res)=>{
+app.put('/users/:no', async(req, res)=>{
     let datas = [req.body.param, req.params.no];
     let result = await mysql.query('userUpdate', datas);
     res.send(result);
 });
 
 //삭제
-app.delete('/t_users/:no', async(req, res)=>{
+app.delete('/users/:no', async(req, res)=>{
     let data = req.params.no;
     let result = await mysql.query('userDelete', data);
     res.send(result);

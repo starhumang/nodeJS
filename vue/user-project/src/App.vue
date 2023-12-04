@@ -1,29 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">UserList</router-link> |
-  </nav>
+<div>
+  <Header /><!--컴포넌트에 등록된 것은 그냥 하나의 태그처럼 사용해도 된다-->
   <router-view/>
+</div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from './layouts/Header.vue'
 
-nav {
-  padding: 30px;
+export default {
+  components : {
+    Header : Header
+    //전에도 적었지만 키와 값이 같으면 그냥 생략해서 둘 중 하나만 적어도 된다.
+  }
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>
