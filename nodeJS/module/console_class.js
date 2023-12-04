@@ -12,6 +12,6 @@ const errorOutput = fs.createWriteStream('./stderr.log');
 //만들어진 파일에 다음의 내용이 들어가게 된다.
 const logger = new Console({ stdout : output, stderr : errorOutput});
 const count = 5;
-logger.log('count : %d', count);
+logger.log('count2 : %d', count);
 logger.error('count : ' + count);
 
