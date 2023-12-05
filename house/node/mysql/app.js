@@ -1,6 +1,6 @@
 //주 서버가 되는 파일
 
-require('dotenv').config({path : './db/mysql.env'});
+require('dotenv').config({path : './node/mysql/db/mysql.env'});
 //여기서 서버 실행시킬거니까 express
 const express = require('express');
 
