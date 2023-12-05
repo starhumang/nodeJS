@@ -1,6 +1,10 @@
 <template>
     <table>
         <tr>
+            <!--mixin-->
+            {{$dateFormat('2023/12/05', 'yyyy-MM-dd')}}
+        </tr>
+        <tr>
             <th>제목</th>
             <td>{{title}}</td>
             <th>조회수</th>
@@ -22,7 +26,12 @@
     </table>
 </template>
 <script>
+// import AppMixin from '../mixin.js';
+
 export default {
+        // mixins : [AppMixin],//컴포넌트 하나에 개별적으로 mixin을 추가함/ 여기에 추가했으니 template에서 mixin에서 정의한 함수 사용가능
+
+
     // props : ['title', 'count', 'writer', 'regdate', 'content'] //타입지정안하고 받는것
     //아래는 조건을 걸어서 받는것
     props : {

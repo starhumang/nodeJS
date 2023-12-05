@@ -19,6 +19,7 @@ import Layout from './ModalLayout.vue'
 export default {
     components :{
         Layout
+        //자식태그를 불러와 안에 대체하고싶은 내용을 작성
     }
 }
 </script>
