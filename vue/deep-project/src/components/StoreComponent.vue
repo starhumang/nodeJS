@@ -51,10 +51,12 @@ export default {
     },
     computed : {//실시간으로 저장소 정보가 update됨
         productList(){
-            return this.$store.state.cart;//$store등록되어 있는 저장소 안에 state기반의 cart를 불러옴
+            return this.$store.state.cart;
+            //$store등록되어 있는 저장소 안에 state기반의 cart를 불러옴
         },
         total(){
-            return this.$store.getters.cartCount;//얘는 getter를 기반으로 정보를 가져옴 각자 정의할때 사용한걸로 불러와야 함(state or getters)
+            return this.$store.getters.cartCount;
+            //얘는 getter를 기반으로 정보를 가져옴 각자 정의할때 사용한걸로 불러와야 함(state or getters)
         }
     },
     methods : {
@@ -66,7 +68,8 @@ export default {
                 category : this.productInfo.category
 
             }
-            this.$store.commit('addProduct', obj);//commit을 이용해서 어떤 메소드를 사용할건지 불러옴, 어떤정보를 넘길지를 2번째 매개변수로
+            this.$store.dispatch('addProduct', obj);
+            //actions는 dispatch를 이용해서 어떤 메소드를 사용할건지 불러옴, 어떤정보를 넘길지를 2번째 매개변수로
         },
     }
 }
