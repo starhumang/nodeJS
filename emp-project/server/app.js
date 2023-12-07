@@ -23,6 +23,13 @@ app.get('/emps', async(req, res)=>{
     let list = await mysql.query('employeesList');
     res.send(list);
 });
+
+//부서조회
+app.get('/depts', async(req, res)=>{
+    let list = await mysql.query('deptInsert');
+    res.send(list);
+});
+
 //한건조회
 app.get('/emps/:no', async(req, res)=>{
     let data = req.params.no;
